@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.cyber-glitch {
+  font-size: 6rem;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Glitch 효과 - 2개의 중첩된 요소 */
+.cyber-glitch::before,
+.cyber-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #d0d0d0; /* 밝은 회색으로 변경 */
+  opacity: 0; /* 기본적으로 숨김 */
+}
+
+/* Glitch 효과 - 더 강한 흔들림과 색상 변화 */
+.cyber-glitch::before {
+  left: 10px; /* 더 많이 흔들리도록 */
+  text-shadow: -6px 0 rgba(255, 255, 255, 0.5); /* 더 선명한 잔상 */
+  animation: glitch-effect 3s infinite steps(1) alternate;
+}
+
+.cyber-glitch::after {
+  left: -6px;
+  text-shadow: 4px 0 rgba(0, 0, 0, 0.5);
+  animation: glitch-effect 3s infinite steps(1) alternate-reverse;
+}
+
+/* 파지직하는 간헐적 효과 - 더 강하게 조절 */
+@keyframes glitch-effect {
+  0% {
+    opacity: 0;
+  }
+  8% {  /* 더 빨리, 더 자주 깜빡이게 */
+    opacity: 1;
+    clip-path: inset(20% 0 60% 0); /* 더 넓은 깨짐 효과 */
+  }
+  12% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+    clip-path: inset(5% 0 90% 0); /* 위아래 랜덤 깨짐 */
+  }
+  42% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+    clip-path: inset(30% 0 40% 0);
+  }
+  57% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    clip-path: inset(10% 0 80% 0);
+  }
+  78% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+.cyber-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
