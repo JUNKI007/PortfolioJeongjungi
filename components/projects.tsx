@@ -41,7 +41,7 @@ export default function Projects() {
     {
       title: "Animal-War",
       description: "MSA로 구성된 전략과 RPG 요소를 결합한 웹 기반 게임",
-      image: `${process.env.NEXT_PUBLIC_BASE_PATH}/AnimalWarLogo.png`},
+      image: "/AnimalWarLogo.png",
       tags: ["React", "Pixi.js", "Spring Boot", "Spring Cloud", "Kafka", "MySQL"],
       youtubeUrl: "https://www.youtube.com/watch?v=phCrzrgv9ww",
       githubUrl: "https://github.com/AnimalWarProject",
@@ -50,7 +50,7 @@ export default function Projects() {
     {
       title: "Devine-Echo",
       description: "Vampire Survivor 스타일 2D 웹 게임 프로젝트",
-      image: `${process.env.NEXT_PUBLIC_BASE_PATH}/DevineEchoLogo.png`},
+      image: "/DevineEchoLogo.png",
       tags: ["React", "Pixi.js", "Spring Boot", "JWT", "MySQL"],
       youtubeUrl: "https://www.youtube.com/watch?v=0ZbwEQ1cuoI",
       githubUrl: "https://github.com/DevineEcho",
@@ -59,7 +59,7 @@ export default function Projects() {
     {
       title: "Book Book",
       description: "사용자가 작성한 게시글을 모아 책으로 출판할 수 있는 BrunchStory 스타일의 웹 서비스",
-      image: `${process.env.NEXT_PUBLIC_BASE_PATH}/BookBookLogo.png`},
+      image: "/BookBookLogo.png",
       tags: ["Java17", "Spring Boot", "JPA", "MySQL", "JWT"],
       youtubeUrl: "https://www.youtube.com/watch?v=7pFIFMa0F4Y",
       githubUrl: "https://github.com/JUNKI007/BookBook",
@@ -68,13 +68,14 @@ export default function Projects() {
     {
       title: "Mavve",
       description: "ChatGPT 기반 영화 추천 기능을 제공하는 Wavve 클론코딩 웹앱",
-      image: `${process.env.NEXT_PUBLIC_BASE_PATH}/MavveLogo.png`},
+      image: "/MavveLogo.png",
       tags: ["Java8", "HTML5", "Servlet", "JSP", "JDBC", "MySQL"],
       youtubeUrl: "https://www.youtube.com/watch?v=7UMTDyJAuKY",
       githubUrl: "https://github.com/JUNKI007/Mavve",
       retrospectiveUrl: "https://devwarriorjungi.tistory.com/entry/Mavve%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%ED%9A%8C%EA%B3%A0",
     },
   ];
+  
   
 
   return (

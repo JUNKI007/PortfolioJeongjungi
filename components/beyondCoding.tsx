@@ -16,7 +16,7 @@ export default function BeyondCoding() {
 
           <div className="bg-white/5 border border-white/10 rounded-sm overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:bg-white/10">
             <div className="relative h-64 w-full">
-              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/Confidence.jpg`} alt="자신감 있는 사람" fill className="object-cover" />
+              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/Confidence.jpg`} alt="자신감 있는 사람" fill unoptimized className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
               <div className="absolute bottom-4 left-4 font-mono text-lg font-bold">자신감 있는 사람</div>
             </div>
@@ -35,7 +35,7 @@ export default function BeyondCoding() {
 
           <div className="bg-white/5 border border-white/10 rounded-sm overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:bg-white/10">
             <div className="relative h-64 w-full">
-              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/Hobby.jpg`} alt="게임이 취미인 개발자" fill className="object-cover" />
+              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/Hobby.jpg`} alt="게임이 취미인 개발자" fill unoptimized className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
               <div className="absolute bottom-4 left-4 font-mono text-lg font-bold">게임이 취미인 개발자</div>
             </div>
@@ -53,7 +53,7 @@ export default function BeyondCoding() {
 
           <div className="bg-white/5 border border-white/10 rounded-sm overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:bg-white/10">
             <div className="relative h-64 w-full">
-              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/Leader.png`} alt="소통과 격려를 중요시하는 리더" fill className="object-cover" />
+              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/Leader.png`} alt="소통과 격려를 중요시하는 리더" fill unoptimized className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
               <div className="absolute bottom-4 left-4 font-mono text-lg font-bold">소통과 격려를 중요시하는 리더</div>
             </div>
