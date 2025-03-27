@@ -42,7 +42,6 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:block">
             <ul className="flex space-x-8">
               {navItems.map((item) => (
@@ -55,7 +54,6 @@ export default function Navbar() {
             </ul>
           </nav>
 
-          {/* Mobile Navigation Button */}
           <div className="md:hidden">
             <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -64,7 +62,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Navigation Menu */}
       {isOpen && (
         <div className="md:hidden bg-black/95 border-t border-white/10">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">

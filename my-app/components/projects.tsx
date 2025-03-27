@@ -11,11 +11,9 @@ export default function Projects() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.1 })
   
-  // 모달 상태 관리
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [youtubeUrl, setYoutubeUrl] = useState("");
 
-  // YouTube 링크에서 Video ID 추출 함수
   const getYoutubeEmbedUrl = (url: string) => {
     try {
       const videoIdMatch = url.match(/(?:youtube\.com\/(?:.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/);
@@ -25,7 +23,7 @@ export default function Projects() {
       return "";
     }
   };
-  // 모달 열기
+
   const openModal = (url: string) => {
     const embedUrl = getYoutubeEmbedUrl(url);
     if (embedUrl) {
@@ -34,7 +32,7 @@ export default function Projects() {
     }
   };
 
-  // 모달 닫기
+
   const closeModal = () => {
     setIsModalOpen(false);
   };
@@ -120,7 +118,6 @@ export default function Projects() {
                 </div>
 
                 <div className="flex gap-3 items-center">
-                  {/* YouTube 팝업 버튼 */}
                   <Button
                     variant="outline"
                     size="sm"
@@ -131,7 +128,6 @@ export default function Projects() {
                     YouTube Video
                   </Button>
 
-                  {/* 깃허브 코드 버튼 */}
                   <Button
                     variant="outline"
                     size="sm"
@@ -167,10 +163,10 @@ export default function Projects() {
       {isModalOpen && (
   <div
     className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50"
-    onClick={closeModal} // 바깥 클릭 시 닫힘
+    onClick={closeModal}
   >
 
-{/* CLOSE VIDEO 버튼 - 테두리 & 호버 효과 추가 */}
+
 <button
   onClick={closeModal}
   className="absolute top-11 left-1/2 transform -translate-x-1/2 px-6 py-3 flex items-center justify-center 
@@ -184,9 +180,8 @@ export default function Projects() {
 
     <div
       className="bg-black p-6 rounded-lg max-w-7xl w-full"
-      onClick={(e) => e.stopPropagation()} // 내부 클릭 시 닫히지 않음
+      onClick={(e) => e.stopPropagation()}
     >
-      {/* YouTube 영상 */}
       {youtubeUrl ? (
         <div className="relative w-full h-0 pb-[75%]">
           <iframe
