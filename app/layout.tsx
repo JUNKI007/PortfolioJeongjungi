@@ -13,8 +13,8 @@ const spaceMono = Space_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Cyber Developer Portfolio",
-  description: "A modern cyber-themed developer portfolio",
+  title: "Jeongjungi Portfolio",
+  description: "Backend developer portfolio",
     generator: 'v0.dev'
 }
 
