@@ -75,14 +75,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  color: #d0d0d0; /* 밝은 회색으로 변경 */
-  opacity: 0; /* 기본적으로 숨김 */
+  color: #d0d0d0;
+  opacity: 0;
 }
 
-/* Glitch 효과 - 더 강한 흔들림과 색상 변화 */
+
 .cyber-glitch::before {
-  left: 10px; /* 더 많이 흔들리도록 */
-  text-shadow: -6px 0 rgba(255, 255, 255, 0.5); /* 더 선명한 잔상 */
+  left: 10px;
+  text-shadow: -6px 0 rgba(255, 255, 255, 0.5);
   animation: glitch-effect 3s infinite steps(1) alternate;
 }
 
@@ -92,14 +92,14 @@
   animation: glitch-effect 3s infinite steps(1) alternate-reverse;
 }
 
-/* 파지직하는 간헐적 효과 - 더 강하게 조절 */
+
 @keyframes glitch-effect {
   0% {
     opacity: 0;
   }
-  8% {  /* 더 빨리, 더 자주 깜빡이게 */
+  8% { 
     opacity: 1;
-    clip-path: inset(20% 0 60% 0); /* 더 넓은 깨짐 효과 */
+    clip-path: inset(20% 0 60% 0);
   }
   12% {
     opacity: 0;
@@ -109,7 +109,7 @@
   }
   40% {
     opacity: 1;
-    clip-path: inset(5% 0 90% 0); /* 위아래 랜덤 깨짐 */
+    clip-path: inset(5% 0 90% 0);
   }
   42% {
     opacity: 0;
