@@ -57,8 +57,8 @@ export default function About() {
 
             <div className="border border-white/10 p-4 bg-white/5 rounded-sm">
               <h3 className="font-mono text-lg mb-1">EDUCATION</h3>
-              <p className="text-white/60">엔코아 플레이데이터 백엔드 1기</p>
-              <p className="text-white/60">2023.06.01 ~ 2023.11.11</p>
+              <p className="text-white/60">플레이데이터 풀스택 백엔드 개발자 양성과정</p>
+              <p className="text-white/60">2023.05.22 ~ 2023.11.28</p>
             </div>
                       <div className="border border-white/10 p-4 bg-white/5 rounded-sm flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 flex-shrink-0 stroke-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
